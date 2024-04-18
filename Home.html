@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <style>
 /* General Styles */
 body {
@@ -17,27 +20,27 @@ body {
 
 /* Navigation Styles */
 .navbar {
-  background-color: lightblue;
+  background-color: rgb(94, 42, 170);
   overflow: hidden;
 }
 
 .navbar a {
   float: left;
   display: block;
-  color: black;
+  color: white;
   text-align: center;
   padding: 14px 20px;
   text-decoration: none;
 }
 
 .navbar a:hover {
-  background-color: skyblue;
+  background-color: rgb(3, 89, 122);
 }
 
 /* Heading Styles */
 #heading1 {
-  background-color: lightblue;
-  color: black;
+  background-color: #221754;
+  color: white;
   padding: 40px;
   text-align: center;
   margin-top: 0;
@@ -104,15 +107,15 @@ input[type="password"] {
 }
 
 input[type="submit"] {
-  background-color: lightblue;
-  color: black;
+  background-color: rgb(94, 42, 170);
+  color: white;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background-color: skyblue;
+  background-color: rgb(3, 89, 122);
 }
 
 input[type="checkbox"] {
@@ -121,8 +124,8 @@ input[type="checkbox"] {
 
 /* Slider Styles */
 .slider-container {
-  margin-top: 20px;
   overflow: hidden;
+  height: 800px
 }
 
 .slider {
@@ -138,95 +141,89 @@ img {
   width: 100%;
   height: auto;
 }
+.checked {
+  color: orange;
+}
 </style>
 </head>
 <body>
 
 <div class="navbar">
   <a href="#home">Home</a>
-  <a href="#products">Products</a>
+  <a href="#Games">Products</a>
   <a href="#contact">Contact Us</a>
 </div>
 
 <div class="slider-container">
   <div class="slider">
-    <div class="slide"><img src="https://via.placeholder.com/1200x400?text=Slide+1" alt="Slide 1"></div>
-    <div class="slide"><img src="https://via.placeholder.com/1200x400?text=Slide+2" alt="Slide 2"></div>
-    <div class="slide"><img src="https://via.placeholder.com/1200x400?text=Slide+3" alt="Slide 3"></div>
+    <div class="slide"><img src="https://cdn.slidemodel.com/wp-content/uploads/60504-01-gaming-event-powerpoint-template-16x9-1.jpg" alt="Slide 1"></div>
   </div>
 </div>
 
-<script>
-  // JavaScript for slider functionality
-  const slider = document.querySelector('.slider');
-  let isDown = false;
-  let startX;
-  let scrollLeft;
 
-  slider.addEventListener('mousedown', (e) => {
-    isDown = true;
-    slider.classList.add('active');
-    startX = e.pageX - slider.offsetLeft;
-    scrollLeft = slider.scrollLeft;
-  });
 
-  slider.addEventListener('mouseleave', () => {
-    isDown = false;
-    slider.classList.remove('active');
-  });
-
-  slider.addEventListener('mouseup', () => {
-    isDown = false;
-    slider.classList.remove('active');
-  });
-
-  slider.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - slider.offsetLeft;
-    const walk = (x - startX) * 2; // Adjust the sliding speed
-    slider.scrollLeft = scrollLeft - walk;
-  });
-</script>
-
-<h2 id="heading1">Products Table</h2>
+<h2 id="heading1">Popular Games</h2>
 
 <div class="container">
   <table>
     <tr>
       <th>Name</th>
       <th>Price</th>
-      <th>Qty</th>
+      <th>Rating</th>
     </tr>
     <tr>
-      <td>Apple</td>
+      <td>Grand Theft Auto V</td>
       <td>$12.00</td>
-      <td>15</td>
+      <td><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span></td>
     </tr>
     <tr>
-      <td>Banana</td>
+      <td>Call of Duty</td>
       <td>$2.99</td>
-      <td>10</td>
+      <td><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span></td>
     </tr>
     <tr>
-      <td>Blackberry</td>
+      <td>Tekken 8</td>
       <td>$3.24</td>
-      <td>5</td>
+      <td><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span></td>
     </tr>
     <tr>
-      <td>Cherry</td>
+      <td>Counter-Strike</td>
       <td>$1.29</td>
-      <td>50</td>
+      <td><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span></td>
     </tr>
     <tr>
-      <td>Strawberry</td>
+      <td>Need For Speed</td>
       <td>$6.99</td>
-      <td>20</td>
+      <td><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span></td>
     </tr>
     <tr>
-      <td>Orange</td>
+      <td>Mario</td>
       <td>$0.99</td>
-      <td>100</td>
+      <td><span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star checked"></span>
+        <span class="fa fa-star"></span>
+        <span class="fa fa-star"></span></td>
     </tr>
   </table>
 
