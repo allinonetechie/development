@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navigation Styles */
+.navbar {
+  background-color: lightblue;
+  overflow: hidden;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+.navbar a:hover {
+  background-color: skyblue;
+}
+
+/* Heading Styles */
+#heading1 {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+  margin-top: 0;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* Section Styles */
+.section {
+  margin-bottom: 40px;
+  padding: 20px;
+}
+
+.section h2 {
+  margin-top: 0;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #dddddd;
+}
+
+.section p {
+  line-height: 1.6;
+}
+
+/* Form Styles */
+form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+fieldset {
+  border: 1px solid #dddddd;
+  padding: 20px;
+}
+
+legend {
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 12px);
+  padding: 8px;
+  margin-bottom: 10px;
+}
+
+input[type="submit"] {
+  background-color: lightblue;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: skyblue;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Slider Styles */
+.slider-container {
+  margin-top: 20px;
+  overflow: hidden;
+}
+
+.slider {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  flex: 0 0 100%;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+</style>
+</head>
+<body>
+
+<div class="navbar">
+  <a href="#home">Home</a>
+  <a href="#products">Products</a>
+  <a href="#contact">Contact Us</a>
+</div>
+
+<div class="slider-container">
+  <div class="slider">
+    <div class="slide"><img src="https://via.placeholder.com/1200x400?text=Slide+1" alt="Slide 1"></div>
+    <div class="slide"><img src="https://via.placeholder.com/1200x400?text=Slide+2" alt="Slide 2"></div>
+    <div class="slide"><img src="https://via.placeholder.com/1200x400?text=Slide+3" alt="Slide 3"></div>
+  </div>
+</div>
+
+<h2 id="heading1">Products Table</h2>
+
+<div class="container">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Price</th>
+      <th>Qty</th>
+    </tr>
+    <tr>
+      <td>Apple</td>
+      <td>$12.00</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <td>Banana</td>
+      <td>$2.99</td>
+      <td>10</td>
+    </tr>
+    <tr>
+      <td>Blackberry</td>
+      <td>$3.24</td>
+      <td>5</td>
+    </tr>
+    <tr>
+      <td>Cherry</td>
+      <td>$1.29</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Strawberry</td>
+      <td>$6.99</td>
+      <td>20</td>
+    </tr>
+    <tr>
+      <td>Orange</td>
+      <td>$0.99</td>
+      <td>100</td>
+    </tr>
+  </table>
+
+  <div class="section">
+    <h2>London</h2>
+    <p>London is the capital city of England. It is the most populous city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+  </div>
+
+  <div class="section" style="background-color:blue;color:white;">
+    <h2>Overview</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+    <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
+  </div>
+
+  <div class="section" style="background-color:gray;color:white;">
+    <h2>Privacy Policy</h2>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry...</p>
+  </div>
+
+  <div class="section returns">
+    <h2>Returns</h2>
+    <p>All returns are welcome.</p>
+    <p>Check your receipt for restocking fees..</p>
+  </div>
+  
+  <div class="section warranty">
+    <h2>Warranty</h2>
+    <p>All products warrantied for 45 days no questions asked.</p>
+    <p>L1 year manufacturer.</p>
+  </div>
+
+  <!--Form-->
+  <form class="section">
+    <fieldset>
+      <legend>Personal Info:</legend>
+      <label for="fname">First name:</label>
+      <input type="text" id="fname" name="fname" value="Waqas">
+      <label for="lname">Last name:</label>
+      <input type="text" id="lname" name="lname" value="Ahmed">
+      <label for="age">Age:</label>
+      <input type="text" id="age" name="age" value="28">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username">
+      <label for="pwd">Password:</label>
+      <input type="password" id="pwd" name="pwd">
+      <input type="checkbox" id="terms" name="terms" value="Bike">
+      <label for="terms"> Accept Terms and Conditions</label><br>
+      <input type="submit" value="Submit">
+    </fieldset>
+  </form>
+</div>
+
+</body>
+</html>
