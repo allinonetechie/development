@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dropdown Menu</title>
+<style>
+    /* Style for the dropdown menu */
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    /* Style for the dropdown button */
+    .dropdown .dropbtn {
+        background-color: #007bff; /* Blue background color */
+        color: white;
+        padding: 16px 73px; /* Adjusted padding for wider main menu items */
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s; /* Smooth transition */
+    }
+
+    /* Hover effect for dropdown button */
+    .dropdown .dropbtn:hover {
+        background-color: #0056b3; /* Darker blue background color on hover */
+    }
+
+    /* Style for the dropdown content */
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        width: 200px; /* Increased width */
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Style for the dropdown links */
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        transition: background-color 0.3s; /* Smooth transition */
+    }
+
+    /* Hover effect for dropdown links */
+    .dropdown-content a:hover {
+        background-color: #ddd; /* Light gray background color on hover */
+    }
+
+    /* Style for the extended dropdown content */
+    .dropdown-content .extended {
+        display: none;
+        background-color: #f9f9f9;
+        position: absolute;
+        left: 100%;
+        top: 0;
+        width: 200px; /* Increased width */
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    /* Show the dropdown content when hovering over the dropdown button */
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    /* Show the extended dropdown content when hovering over the sub-item */
+    .dropdown-content a:hover + .extended {
+        display: block;
+    }
+
+    /* Hide the extended dropdown content when not hovering over the dropdown content */
+    .dropdown-content:hover .extended {
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<div class="dropdown">
+    <button class="dropbtn">Menu 1</button>
+    <div class="dropdown-content">
+        <a href="#">Sub-item 1</a>
+        <div class="extended">
+            <a href="#">Extended Sub-item 1</a>
+            <a href="#">Extended Sub-item 2</a>
+        </div>
+        <a href="#">Sub-item 2</a>
+        <div class="extended">
+            <a href="#">Extended Sub-item 3</a>
+            <a href="#">Extended Sub-item 4</a>
+        </div>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Menu 2</button>
+    <div class="dropdown-content">
+        <a href="#">Sub-item 1</a>
+        <div class="extended">
+            <a href="#">Extended Sub-item 5</a>
+            <a href="#">Extended Sub-item 6</a>
+        </div>
+        <a href="#">Sub-item 2</a>
+        <div class="extended">
+            <a href="#">Extended Sub-item 7</a>
+            <a href="#">Extended Sub-item 8</a>
+        </div>
+    </div>
+</div>
+
+<div class="dropdown">
+    <button class="dropbtn">Menu 3</button>
+    <div class="dropdown-content">
+        <a href="#">Sub-item 1</a>
+        <div class="extended">
+            <a href="#">Extended Sub-item 9</a>
+            <a href="#">Extended Sub-item 10</a>
+        </div>
+        <a href="#">Sub-item 2</a>
+        <div class="extended">
+            <a href="#">Extended Sub-item 11</a>
+            <a href="#">Extended Sub-item 12</a>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
